@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Dashboard</title>
+
+    <link rel="icon" href="sido.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Segoe UI;
+      }
+
+      body {
+        background: #020220;
+      }
+
+      .main_box {
+        background-color: rgb(7, 7, 49);
+        width: 1000px;
+        height: 500px;
+        margin: 80px auto;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 800px;
+        height: 350px;
+        position: absolute;
+        top: 80px;
+        left: 100px;
+        gap: 20px;
+      }
+
+      .items {
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        animation: fadeUp 1s ease forwards;
+      }
+
+      /* PREMIUM HOVER */
+      .items:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      }
+
+      /* CLICK EFFECT */
+      .items:active {
+        transform: scale(0.97);
+      }
+
+      /* FIRST BOX */
+      #first_box {
+        background-color: blueviolet;
+        grid-row: 1/3;
+        color: white;
+      }
+
+      #first_box:hover {
+        box-shadow: 0 0 30px #a855f7;
+      }
+
+      #first_box p,
+      #first_box h1 {
+        margin-left: 20px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 15px 0 40px 20px;
+        transition: 0.4s;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+
+      /* CONTENT BOX */
+      .items_content {
+        height: 140px;
+        border-radius: 10px;
+        background-color: rgb(11, 12, 95);
+        margin-top: 32px;
+        color: #fff;
+        backdrop-filter: blur(10px);
+        transition: 0.4s;
+      }
+
+      .items:hover .items_content {
+        background: #0608c9;
+      }
+
+      .items_content p {
+        position: relative;
+        top: 10px;
+        left: 15px;
+      }
+
+      .items_content h1 {
+        margin-left: 15px;
+        opacity: 0.9;
+        transition: 0.3s;
+      }
+
+      .items_content h1:hover {
+        color: #00ffee;
+      }
+
+      /* ICON */
+      i {
+        position: relative;
+        left: 160px;
+        transition: 0.3s;
+      }
+
+      .items:hover i {
+        transform: rotate(90deg);
+        color: cyan;
+      }
+
+      /* FIRST BOX LIST */
+      #first_box .items_content {
+        background-color: rgb(11, 12, 95);
+        height: 120px;
+        width: 185px;
+        position: absolute;
+        bottom: -15px;
+        border-radius: 0 0 10px 10px;
+      }
+
+      #first_box li {
+        list-style: none;
+        opacity: 0.6;
+        margin: 10px;
+      }
+
+      #first_box li:hover {
+        opacity: 1;
+        color: #00ffee;
+      }
+
+      /* COLORS */
+      #second_box {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+      }
+      #third_box {
+        background: linear-gradient(to right, #2289ff, #00c3ff);
+      }
+      #fourth_box {
+        background: linear-gradient(to right, #e90a0a, #ff4027);
+      }
+      #fifth_box {
+        background: linear-gradient(to right, #31e704, #00ff6a);
+      }
+      #sixth_box {
+        background: linear-gradient(to right, #4e0aa7, #ab0eb9);
+      }
+      #seventh_box {
+        background: linear-gradient(to right, #ffc917, #d6c73e);
+      }
+
+      .container .items:hover {
+        transform: translateY(-15px);
+
+      }
+
+      /* ANIMATION */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main_box">
+      <div class="container">
+        <div class="items" id="first_box">
+          <img src="man.jpg" />
+          <p>Request For</p>
+          <h1>Jeremy <br />Robson</h1>
+
+          <div class="items_content">
+            <ul>
+              <li>Daily</li>
+              <li>Weekly</li>
+              <li>Monthly</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="items" id="second_box">
+          <div class="items_content">
+            <p>Work</p>
+            <i class="fa-solid fa-ellipsis"></i>
+            <h1>32hrs</h1>
+            <p>Last Work-35hrs</p>
+          </div>
+        </div>
+
+        <div class="items" id="third_box">
+          <div class="items_content">
+            <p>Play</p>
+            <i class="fa-solid fa-ellipsis"></i>
+            <h1>10hrs</h1>
+            <p>Last Week-8hrs</p>
+          </div>
+        </div>
+
+        <div class="items" id="fourth_box">
+          <div class="items_content">
+            <p>Study</p>
+            <i class="fa-solid fa-ellipsis"></i>
+            <h1>4hrs</h1>
+            <p>Last Week-7hrs</p>
+          </div>
+        </div>
+
+        <div class="items" id="fifth_box">
+          <div class="items_content">
+            <p>Exercise</p>
+            <i class="fa-solid fa-ellipsis"></i>
+            <h1>4hrs</h1>
+            <p>Last Week-5hrs</p>
+          </div>
+        </div>
+
+        <div class="items" id="sixth_box">
+          <div class="items_content">
+            <p>Social</p>
+            <i class="fa-solid fa-ellipsis"></i>
+            <h1>5hrs</h1>
+            <p>Last Week-10hrs</p>
+          </div>
+        </div>
+
+        <div class="items" id="seventh_box">
+          <div class="items_content">
+            <p>Self Care</p>
+            <i class="fa-solid fa-ellipsis"></i>
+            <h1>2hrs</h1>
+            <p>Last Week-2hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
